@@ -1,63 +1,54 @@
-# Sri Lanka Houses Price Prediction using XGBoost
+# 🏡 Sri Lanka House Price Prediction
 
-## Project Overview
-This project aims to predict house prices in Sri Lanka using web-scraped data from ikman.lk. It uses the XGBoost regression algorithm and provides model explainability using SHAP. A Streamlit web application is included for interactive predictions.
+Welcome to the end-to-end Machine Learning pipeline for predicting house prices in Sri Lanka! This complete project was built from scratch and includes data scraping, preprocessing, XGBoost model training, SHAP explainability, and a fully interactive Streamlit web application.
 
-## Folder Structure
+## 🚀 Features
+- **Ethical Web Scraping:** Uses `requests` and `BeautifulSoup` to scrape real estate data from ikman.lk.
+- **Robust Preprocessing:** Handles complex currency conversions, extracts features via Regex, and encodes categorical variables.
+- **XGBoost Regressor:** Utilizes advanced gradient boosting with hyperparameter tuning via `RandomizedSearchCV` and early stopping.
+- **Explainable AI (XAI):** Uses `SHAP` (SHapley Additive exPlanations) to provide Global and Local explanations for predictions.
+- **Interactive UI:** A highly polished `Streamlit` application for real-time predictions and visualizations.
+
+## 📂 Project Structure
+There are two main components of this repository. The final comprehensive assignment is located in the `sri-lanka-house-price/` directory.
+
+```text
+sri-lanka-house-price/
+├── scrape.py           # Web scraper (with synthetic fallback)
+├── src/
+│   ├── preprocess.py   # Cleans data and splits into Train/Val/Test
+│   ├── train.py        # Trains the XGBoost model
+│   ├── evaluate.py     # Calculates metrics and generates plots
+│   └── explain.py      # Generates SHAP explainability plots
+├── app/
+│   └── streamlit_app.py # The Streamlit front-end
+├── data/               # Raw and processed CSV datasets
+├── models/             # Saved XGBoost models and encoders
+├── plots/              # All generated charts and visual explanations
+├── requirements.txt    # Project dependencies
+└── report.md           # Comprehensive academic assignment report
 ```
-scrape.py           # Web scraping script
-src/
-  preprocess.py     # Data cleaning and feature engineering
-  train.py          # Model training and hyperparameter tuning
-  evaluate.py       # Model evaluation and metrics
-  explain.py        # Model explainability using SHAP
-  utils.py          # Logging and directory utilities
-models/             # Saved models and encoders
-outputs/            # Metrics and plots
-  plots/            # Generated visualizations
-app/
-  streamlit_app.py  # Streamlit frontend app
-requirements.txt    # Project dependencies
-README.md           # Instructions
-report_outline.md   # Report structure
-```
 
-## Installation Steps
-1. Clone or download this project.
-2. Install dependencies:
+## 🛠️ Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/pramudithasadeepa/ML_Assignment.git
+   cd ML_Assignment/sri-lanka-house-price
+   ```
+2. Install the required Python packages:
    ```bash
    pip install -r requirements.txt
    ```
 
-## Run Commands
-Follow these steps in order to run the project end-to-end:
+## 🏃‍♂️ How to Run the Pipeline
+To execute the pipeline from scratch and generate new models/plots, run the scripts in this exact order from the `sri-lanka-house-price/` directory:
 
-1. **Scrape Data (Optional if you have houses_for_sale.csv):**
-   ```bash
-   python scrape.py
-   ```
+1. **Scrape Data:** `python scrape.py`
+2. **Preprocess:** `python src/preprocess.py`
+3. **Train Model:** `python src/train.py`
+4. **Evaluate:** `python src/evaluate.py`
+5. **Explainability:** `python src/explain.py`
+6. **Launch Web App:** `streamlit run app/streamlit_app.py`
 
-2. **Preprocess Data:**
-   ```bash
-   python src/preprocess.py
-   ```
-
-3. **Train Model:**
-   ```bash
-   python src/train.py
-   ```
-
-4. **Evaluate Model:**
-   ```bash
-   python src/evaluate.py
-   ```
-
-5. **Generate Explanations:**
-   ```bash
-   python src/explain.py
-   ```
-
-6. **Run Streamlit App:**
-   ```bash
-   streamlit run app/streamlit_app.py
-   ```
+## 📊 Documentation
+A fully detailed academic report covering the problem definition, algorithm selection, evaluation results, and critical limitations can be found in `sri-lanka-house-price/report.md`.
