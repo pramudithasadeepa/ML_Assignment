@@ -1,4 +1,8 @@
 # Project Report: Sri Lanka House Price Prediction
+**Author:** Pramuditha Sadeepa  
+**Source Code Repository:** [https://github.com/pramudithasadeepa/ML_Assignment](https://github.com/pramudithasadeepa/ML_Assignment)  
+
+---
 
 ## 1. Problem Definition & Dataset Collection
 **Problem Statement:** The Sri Lankan real estate market suffers from high price opacity, making it difficult for buyers and sellers to establish fair market values. This project aims to build a machine learning regression model to accurately predict house prices based on key property features, thereby assisting stakeholders in making informed, data-driven decisions.
